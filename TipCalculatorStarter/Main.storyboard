@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalculatorStarter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWT-0n-IHo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIp Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgP-cB-6bn">
+                                        <rect key="frame" x="24" y="0.0" width="157.5" height="125"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="tcCharcoal"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-RR-mCA">
+                                        <rect key="frame" x="302" y="45" width="51" height="31"/>
+                                        <color key="onTintColor" name="tcSeafoamGreen"/>
+                                        <connections>
+                                            <action selector="themeToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="1Uf-fv-hrq"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="NdV-RR-mCA" secondAttribute="trailing" constant="24" id="2NK-A1-S1G"/>
+                                    <constraint firstItem="VgP-cB-6bn" firstAttribute="leading" secondItem="bWT-0n-IHo" secondAttribute="leading" constant="24" id="5p2-CD-SGo"/>
+                                    <constraint firstAttribute="bottom" secondItem="VgP-cB-6bn" secondAttribute="bottom" id="8G8-im-ep7"/>
+                                    <constraint firstItem="NdV-RR-mCA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VgP-cB-6bn" secondAttribute="trailing" constant="20" id="Feh-MJ-mbe"/>
+                                    <constraint firstItem="NdV-RR-mCA" firstAttribute="top" secondItem="bWT-0n-IHo" secondAttribute="top" constant="45" id="ep1-fd-5fh"/>
+                                    <constraint firstItem="NdV-RR-mCA" firstAttribute="leading" secondItem="VgP-cB-6bn" secondAttribute="trailing" constant="120.5" id="p84-Xn-kWZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFT-bA-K6q">
+                                <rect key="frame" x="15" y="149" width="345" height="193"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQC-eW-iUN">
+                                <rect key="frame" x="15" y="366" width="345" height="193"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYx-ID-6EW">
+                                <rect key="frame" x="15" y="583" width="345" height="60"/>
+                                <color key="backgroundColor" name="tcDarkBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="J5t-rS-bdE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="tcOffWhite"/>
+                        <constraints>
+                            <constraint firstItem="bWT-0n-IHo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ajz-W0-7HD"/>
+                            <constraint firstItem="dYx-ID-6EW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="BMw-qS-u2l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFT-bA-K6q" secondAttribute="trailing" constant="15" id="DwA-bE-jq4"/>
+                            <constraint firstItem="ZQC-eW-iUN" firstAttribute="top" secondItem="lFT-bA-K6q" secondAttribute="bottom" constant="24" id="FIY-dv-jAN"/>
+                            <constraint firstItem="ZQC-eW-iUN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="H6a-zq-G6O"/>
+                            <constraint firstItem="dYx-ID-6EW" firstAttribute="top" secondItem="ZQC-eW-iUN" secondAttribute="bottom" constant="24" id="MDh-cy-asL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bWT-0n-IHo" secondAttribute="trailing" id="MK1-4H-XcS"/>
+                            <constraint firstItem="lFT-bA-K6q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Ns5-a1-Y8l"/>
+                            <constraint firstItem="VgP-cB-6bn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Oi3-JP-Uqt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dYx-ID-6EW" secondAttribute="trailing" constant="15" id="SSM-uP-Xj6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bWT-0n-IHo" secondAttribute="bottom" constant="542" id="Sd9-BE-Vg1"/>
+                            <constraint firstItem="ZQC-eW-iUN" firstAttribute="height" secondItem="lFT-bA-K6q" secondAttribute="height" id="UTE-Tj-Rg1"/>
+                            <constraint firstItem="bWT-0n-IHo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VJr-25-ydk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZQC-eW-iUN" secondAttribute="trailing" constant="15" id="XxJ-5z-FRI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dYx-ID-6EW" secondAttribute="bottom" constant="24" id="fSi-iz-VJj"/>
+                            <constraint firstItem="lFT-bA-K6q" firstAttribute="top" secondItem="bWT-0n-IHo" secondAttribute="bottom" constant="24" id="ksi-zN-GLy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="headerView" destination="bWT-0n-IHo" id="z38-cn-n2m"/>
+                        <outlet property="themeSwitch" destination="NdV-RR-mCA" id="2FR-dT-s9T"/>
+                        <outlet property="titleLabel" destination="VgP-cB-6bn" id="VlY-Eb-Xqc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="tcCharcoal">
+            <color red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tcDarkBlue">
+            <color red="0.16899999976158142" green="0.17599999904632568" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tcOffWhite">
+            <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tcSeafoamGreen">
+            <color red="0.34900000691413879" green="0.85500001907348633" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
