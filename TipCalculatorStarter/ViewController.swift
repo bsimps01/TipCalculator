@@ -11,11 +11,20 @@ import UIKit
 class ViewController: UIViewController {
 
     // MARK: - View Lifecycle
-    let selectedColor = UIColor.tcSeafoamGreen
+    //let selectedColor = UIColor.tcSeafoamGreen
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var themeSwitch: UISwitch!
+    @IBOutlet weak var inputCardView: UIView!
+    @IBOutlet weak var billAmountTextField: UIView!
+    @IBOutlet weak var tipPercentageSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var outputCardView: UIView!
+    @IBOutlet weak var tipAmountTitleLabel: UILabel!
+    @IBOutlet weak var tipAmountLabel: UILabel!
+    @IBOutlet weak var totalAmountTitleLabel: UILabel!
+    @IBOutlet weak var totalAmountLabel: UILabel!
+    @IBOutlet weak var resetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +36,11 @@ class ViewController: UIViewController {
             print("switch toggled off")
         }
     }
-    
-    func header(){
-    
+    @IBAction func tipPercentChanged(_ sender: UISegmentedControl) {
     }
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        print("reset button tapped")
+    }
+    
 }
 
